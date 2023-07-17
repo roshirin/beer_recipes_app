@@ -1,0 +1,9 @@
+@import './styles/utils/_mixins.scss';
+
+.main {
+  padding: 20px;
+
+  @include onTablet {
+    padding: 30px;
+  }
+}

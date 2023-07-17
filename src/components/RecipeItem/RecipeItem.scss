@@ -1,0 +1,61 @@
+@import '../../styles/utils/mixins';
+@import '../../styles/utils/_vars.scss';
+
+.recipe-card {
+  background-color: $color-white;
+  border-radius: 0.25rem;
+  box-shadow: 0 0.4em 0.8em -0.075em rgba(10, 10, 10, 0.1), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  color: #4a4a4a;
+  max-width: 100%;
+  position: relative;
+  cursor: pointer;
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: 0 0.8em 1.2em -0.125em rgba(10, 10, 10, 0.2), 0 0px 0 1px rgba(10, 10, 10, 0.02);
+  }
+}
+
+.selected-item {
+  background-color: #ffd8b1;
+}
+
+.list-image-container {
+  min-width: 100px;
+  text-align: center;
+
+  @include onTablet {
+    min-width: 140px;
+  }
+
+  @include onDesktop {
+    min-width: 180px;
+  }
+}
+
+.list-image {
+  max-height: 120px;
+
+  @include onTablet {
+    max-height: 140px;
+  }
+
+  @include onDesktop {
+    max-height: 160px;
+  }
+}
+
+.mobile-hidden {
+  display: none;
+
+  @include onTablet {
+    display: block;
+  }
+}
+.short-desc {
+  color: #363636;
+
+  &:hover {
+    color: rgb(107, 47, 47);
+  }
+}

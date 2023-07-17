@@ -1,0 +1,63 @@
+@import '../../styles/utils/_mixins.scss';
+
+.recipe-title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  font-size: 32px;
+  text-align: center;
+
+  @include onTablet {
+    font-size: 36px;
+  }
+
+  @include onDesktop {
+    margin-bottom: 40px;
+    font-size: 40px;
+    text-align: start;
+  }
+}
+
+.recipe-content {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+
+  @include onDesktop {
+    flex-direction: row;
+  }
+}
+
+.image-container {
+  max-height: 280px;
+  text-align: center;
+
+  &__img {
+    height: 100%;
+  }
+
+  @include onDesktop {
+    flex: 0 0 25%;
+  }
+}
+
+.features-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 0 20px;
+
+  &__info-block {
+    display: flex;
+    width: 100%;
+    padding: 15px 0;
+    align-self: center;
+    justify-content: space-around;
+    border-top: 1px solid #999;
+    border-bottom: 1px solid #999;
+  }
+
+  &__food-pairing {
+    list-style: disc;
+    padding-left: 15px;
+  }
+}

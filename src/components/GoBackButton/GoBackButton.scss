@@ -1,0 +1,16 @@
+.go-back {
+  cursor: pointer;
+
+  border: none;
+  background-color: transparent;
+  padding-top: 0;
+  padding-bottom: 0;
+  font-size: 16px;
+  font-weight: 500;
+  color: #666;
+
+  &:hover {
+    text-decoration: underline;
+    color: #000;
+  }
+}

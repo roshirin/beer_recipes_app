@@ -1,0 +1,54 @@
+@import '../../styles/utils/_vars.scss';
+
+.delete-button-container {
+  position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  bottom: 0;
+  left: 0;
+  width: 100vw;
+  height: $delete-container-height;
+  background-color: rgba(146, 207, 154, 0.8);
+  transition: all 0.3s;
+
+  &--hidden {
+    bottom: -$delete-container-height;
+  }
+}
+
+.delete-section-button {
+  width: 200px;
+  height: 40px;
+  border: none;
+  border-radius: 4px;
+  color: $color-white;
+  font-size: 18px;
+  background-color: $color-light-blue;
+  transition: all 0.15s;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $color-deep-blue;
+  }
+}
+
+.clean-button {
+  color: $color-light-blue;
+  background-color: $color-white;
+  border: 1px solid $color-light-blue;
+
+  &:hover {
+    color: $color-deep-blue;
+    border: 1px solid $color-deep-blue;
+    background-color: $color-light-grey;
+  }
+
+  &:disabled {
+    color: $color-medium-grey;
+    border: 1px solid $color-light-grey;
+    background-color: $color-white;
+    cursor: default;
+  }
+}
