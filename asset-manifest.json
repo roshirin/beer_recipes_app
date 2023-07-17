@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/static/css/main.ca155fa4.css",
-    "main.js": "/static/js/main.157581ec.js",
-    "static/media/mock_image.png": "/static/media/mock_image.fdfe2785324fe6374a68.png",
-    "index.html": "/index.html",
-    "main.ca155fa4.css.map": "/static/css/main.ca155fa4.css.map",
-    "main.157581ec.js.map": "/static/js/main.157581ec.js.map"
+    "main.css": "/beer_recipes_app/static/css/main.ca155fa4.css",
+    "main.js": "/beer_recipes_app/static/js/main.202339b3.js",
+    "static/media/mock_image.png": "/beer_recipes_app/static/media/mock_image.fdfe2785324fe6374a68.png",
+    "index.html": "/beer_recipes_app/index.html",
+    "main.ca155fa4.css.map": "/beer_recipes_app/static/css/main.ca155fa4.css.map",
+    "main.202339b3.js.map": "/beer_recipes_app/static/js/main.202339b3.js.map"
   },
   "entrypoints": [
     "static/css/main.ca155fa4.css",
-    "static/js/main.157581ec.js"
+    "static/js/main.202339b3.js"
   ]
 }
