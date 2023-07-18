@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Recipe } from '../../types/Recipe';
-import mock from '../../images/mock_image.png';
+import mockImage from '../../images/mock_image.png';
 import './RecipeInfo.scss';
 
 type Props = {
@@ -36,7 +36,7 @@ export const RecipeInfo: FC<Props> = ({ recipe }) => {
       <div className="recipe-content">
         <div className="image-container">
           <img
-            src={imageUrl || mock}
+            src={imageUrl || mockImage}
             alt={name}
             className="image-container__img"
           />

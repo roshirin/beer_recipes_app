@@ -7,7 +7,7 @@ export const Footer = () => (
       <Link to="/">
         <h3 className="title is-size-3">Beer recipes</h3>
       </Link>
-      <span>© 2023 - beer_app</span>
+      <span>©2023 - Beer app</span>
     </div>
   </footer>
 );

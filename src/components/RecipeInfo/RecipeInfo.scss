@@ -19,6 +19,8 @@
 
 .recipe-content {
   display: flex;
+  max-width: 1152px;
+  margin: 0 auto;
   flex-direction: column;
   gap: 30px;
 
@@ -28,15 +30,20 @@
 }
 
 .image-container {
-  max-height: 280px;
+  height: 260px;
   text-align: center;
 
-  &__img {
-    height: 100%;
+  @include onTablet {
+    height: 300px;
   }
 
   @include onDesktop {
+    height: 360px;
     flex: 0 0 25%;
+  }
+
+  &__img {
+    height: 100%;
   }
 }
 
@@ -54,6 +61,10 @@
     justify-content: space-around;
     border-top: 1px solid #999;
     border-bottom: 1px solid #999;
+  }
+
+  &__info-group {
+    flex-basis: 50%;
   }
 
   &__food-pairing {

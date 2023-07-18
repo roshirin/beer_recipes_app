@@ -1,9 +1,16 @@
 @import './styles/utils/_mixins.scss';
 
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .main {
   padding: 20px;
+  flex-grow: 1;
 
   @include onTablet {
-    padding: 30px;
+    padding: 40px 30px;
   }
 }

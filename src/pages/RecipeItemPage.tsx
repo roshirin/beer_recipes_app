@@ -1,11 +1,11 @@
 import { useState, useEffect, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
+import { RecipeInfo } from '../components/RecipeInfo';
 import { GoBackButton } from '../components/GoBackButton';
+import { Loader } from '../components/Loader';
 import { useRecipesStore } from '../stores/useRecipesStore';
 import { Recipe } from '../types/Recipe';
-import { RecipeInfo } from '../components/RecipeInfo';
 import { getRecipeById } from '../api/recipes';
-import { Loader } from '../components/Loader';
 
 export const RecipeItemPage = () => {
   const [recipe, setRecipe] = useState<Recipe | null>(null);
@@ -38,7 +38,7 @@ export const RecipeItemPage = () => {
 
   useEffect(() => {
     getSingleRecipe();
-  }, [loadedRecipes]);
+  }, [recipeId]);
 
   return (
     <div className="container">

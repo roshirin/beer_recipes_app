@@ -1,9 +1,8 @@
 import { useEffect, useCallback, useRef } from 'react';
-// import { debounce } from 'lodash';
 import { RecipeItem } from '../components/RecipeItem';
 import { DeleteButton } from '../components/DeleteButton';
-import { useRecipesStore } from '../stores/useRecipesStore';
 import { recipesStep } from '../constants/constants';
+import { useRecipesStore } from '../stores/useRecipesStore';
 import { ObserverCallback } from '../types/ObserverCallback';
 import './styles/RecipeListPage.scss';
 
@@ -12,6 +11,7 @@ export const RecipesListPage = () => {
   const firstRecipeIndex = useRecipesStore((state) => state.firstRecipeIndex);
   const preparedRecipes = useRecipesStore((state) => state.preparedRecipes);
   const isLastPage = useRecipesStore((state) => state.isLastPage);
+
   const getPreparedRecipes = useRecipesStore(
     (state) => state.getPreparedRecipes,
   );
@@ -19,6 +19,7 @@ export const RecipesListPage = () => {
     (state) => state.setFirstRecipeIndex,
   );
   const setIsLastPage = useRecipesStore((state) => state.setIsLastPage);
+
   const observerRef = useRef<IntersectionObserver | null>(null);
   const firstRecipeRef = useRef<HTMLDivElement | null>(null);
   const lastRecipeRef = useRef<HTMLDivElement | null>(null);
@@ -49,8 +50,6 @@ export const RecipesListPage = () => {
     },
     [preparedRecipes],
   );
-
-  // const debounsedIntHandler = debounce(handleIntersection, 50);
 
   useEffect(() => {
     getPreparedRecipes();
